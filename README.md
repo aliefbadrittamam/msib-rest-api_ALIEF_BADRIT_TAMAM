@@ -1,41 +1,106 @@
 # MSIB REST API
-
 Proyek ini adalah sebuah REST API yang dikembangkan untuk memenuhi tugas MSIB. API ini menggunakan Laravel dengan middleware Sanctum untuk proteksi endpoint dan memiliki berbagai fitur seperti registrasi, login, manajemen produk, dan pencarian produk.
 
-### by. FSD 11 - SITI NURHALIZA
+### Dibuat oleh: FSD 25 - ALIEF BADRIT TAMAM
 
-## Task
+## Daftar Tugas Pengembangan
+1. **Tambahkan Function Logout**
+   - Menyediakan endpoint logout bagi pengguna yang telah login.
 
-1. **Tambahkan Function Logout** - Menyediakan endpoint logout bagi pengguna yang telah login.
-2. **Modify Route `api.php`** - Melindungi endpoint dengan middleware Sanctum agar hanya pengguna terautentikasi yang dapat mengakses.
-3. **Buat Endpoint Pencarian Produk Berdasarkan Nama** - Menyediakan fungsi untuk mencari produk berdasarkan nama.
-4. **Modifikasi Endpoint Get All Products dengan Filter Berdasarkan Kategori** - Menambahkan fitur filter kategori pada endpoint produk.
+2. **Modifikasi Route `api.php`**
+   - Melindungi endpoint dengan middleware Sanctum
+   - Memastikan hanya pengguna terautentikasi yang dapat mengakses
 
-## Fitur Utama
+3. **Buat Endpoint Pencarian Produk**
+   - Mengimplementasikan pencarian produk berdasarkan nama
 
-1. **Registrasi**  
-   ![REGISTER](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/Register.png)
+4. **Modifikasi Endpoint Produk**
+   - Menambahkan fitur filter berdasarkan kategori
 
-2. **Login**  
-   ![LOGIN](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/Login.png)
+## Fitur Utama API
 
-3. **List Produk**  
-   ![LIST PRODUK](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/List%20Produk.png)
+### Autentikasi
+- Registrasi pengguna baru
+- Login pengguna
+- Logout pengguna
+- Proteksi endpoint menggunakan Sanctum
 
-4. **Pencarian Produk Berdasarkan Nama**  
-   ![SEARCH PRODUK](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/Search%20Product.png)
+### Manajemen Produk
+- List produk keseluruhan
+- Pencarian produk berdasarkan nama
+- Filter produk berdasarkan kategori
+- Update informasi produk
 
-5. **Filter Berdasarkan Kategori Produk**  
-   ![FILTER BY CATEGORY](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/filter%20by%20product%20category%20.png)
+## Persyaratan Sistem
+- PHP 8.x
+- Composer
+- Laravel Framework
+- Database MySQL/MariaDB
 
-6. **Update Produk**  
-   ![UPDATE](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/Update.png)
+## Langkah Instalasi
 
-7. **Logout**
-8. ![LOGOUT](https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA/blob/master/public/img/Logout.png)
+### Prasyarat
+- Pastikan PHP, Composer, dan MySQL terinstal
+- Clone repositori dari GitHub
 
-## Instalasi
-
-1. Clone repositori ini:
+### Instalasi Proyek
+1. Clone repositori
    ```bash
    git clone https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA.git
+   ```
+
+2. Masuk ke direktori proyek
+   ```bash
+   cd msib-rest-api_SITI-NURHALIZA
+   ```
+
+3. Install dependencies
+   ```bash
+   composer install
+   ```
+
+4. Salin file environment
+   ```bash
+   cp .env.example .env
+   ```
+
+5. Generate application key
+   ```bash
+   php artisan key:generate
+   ```
+
+6. Konfigurasi database di file `.env`
+
+7. Jalankan migrasi database
+   ```bash
+   php artisan migrate
+   ```
+
+8. Jalankan server
+   ```bash
+   php artisan serve
+   ```
+
+## Endpoint API
+
+### Autentikasi
+- `POST /api/register` - Registrasi pengguna baru
+- `POST /api/login` - Login pengguna
+- `POST /api/logout` - Logout pengguna (memerlukan autentikasi)
+
+### Produk
+- `GET /api/products` - Daftar produk (dengan opsional filter kategori)
+- `GET /api/products/search` - Pencarian produk berdasarkan nama
+- `POST /api/products` - Tambah produk baru
+- `PUT /api/products/{id}` - Update produk
+
+## Autentikasi & Keamanan
+- Menggunakan Laravel Sanctum
+- Token-based authentication
+- Proteksi endpoint dengan middleware
+
+## Kontributor
+- ALIEF BADRIT TAMAM (FSD 25)
+
+## Lisensi
+[Tentukan lisensi proyek Anda]
