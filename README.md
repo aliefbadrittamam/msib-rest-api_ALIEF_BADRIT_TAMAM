@@ -101,6 +101,3 @@ Proyek ini adalah sebuah REST API yang dikembangkan untuk memenuhi tugas MSIB. A
 
 ## Kontributor
 - ALIEF BADRIT TAMAM (FSD 25)
-
-## Lisensi
-[Tentukan lisensi proyek Anda]
