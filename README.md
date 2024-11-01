@@ -6,19 +6,15 @@ Proyek ini adalah sebuah REST API yang dikembangkan untuk memenuhi tugas MSIB. A
 ## Daftar Tugas Pengembangan
 1. **Tambahkan Function Logout**
    - Menyediakan endpoint logout bagi pengguna yang telah login.
-
 2. **Modifikasi Route `api.php`**
    - Melindungi endpoint dengan middleware Sanctum
    - Memastikan hanya pengguna terautentikasi yang dapat mengakses
-
 3. **Buat Endpoint Pencarian Produk**
    - Mengimplementasikan pencarian produk berdasarkan nama
-
 4. **Modifikasi Endpoint Produk**
    - Menambahkan fitur filter berdasarkan kategori
 
 ## Fitur Utama API
-
 ### Autentikasi
 - Registrasi pengguna baru
 - Login pengguna
@@ -38,7 +34,6 @@ Proyek ini adalah sebuah REST API yang dikembangkan untuk memenuhi tugas MSIB. A
 - Database MySQL/MariaDB
 
 ## Langkah Instalasi
-
 ### Prasyarat
 - Pastikan PHP, Composer, dan MySQL terinstal
 - Clone repositori dari GitHub
@@ -46,12 +41,12 @@ Proyek ini adalah sebuah REST API yang dikembangkan untuk memenuhi tugas MSIB. A
 ### Instalasi Proyek
 1. Clone repositori
    ```bash
-   git clone https://github.com/siitinurhaliza/msib-rest-api_SITI-NURHALIZA.git
+   git clone https://github.com/aliefbadrittamam/msib-rest-api_ALIEF_BADRIT_TAMAM
    ```
 
 2. Masuk ke direktori proyek
    ```bash
-   cd msib-rest-api_SITI-NURHALIZA
+   cd msib-rest-api_ALIEF_BADRIT_TAMAM
    ```
 
 3. Install dependencies
@@ -82,7 +77,6 @@ Proyek ini adalah sebuah REST API yang dikembangkan untuk memenuhi tugas MSIB. A
    ```
 
 ## Endpoint API
-
 ### Autentikasi
 - `POST /api/register` - Registrasi pengguna baru
 - `POST /api/login` - Login pengguna
